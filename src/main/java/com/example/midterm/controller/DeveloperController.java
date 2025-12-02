@@ -1,7 +1,7 @@
 package com.example.midterm.controller;
 
 import com.example.midterm.dto.DeveloperDTO;
-import com.example.midterm.service.DeveloperService;
+import com.example.midterm.service.impl.DeveloperServiceImpl;
 import lombok.RequiredArgsConstructor;
 import org.springframework.web.bind.annotation.*;
 
@@ -11,7 +11,7 @@ import java.util.List;
 @RequiredArgsConstructor
 @RequestMapping("/api/developers")
 public class DeveloperController {
-    private final DeveloperService developerService;
+    private final DeveloperServiceImpl developerService;
 
     @PostMapping
     public DeveloperDTO createDeveloper(@RequestBody DeveloperDTO developerDTO){

@@ -19,6 +19,6 @@ public class Platform {
     private String name;
     private String manufacturer;
 
-    @ManyToMany(mappedBy = "platform")
+    @ManyToMany(mappedBy = "platforms")
     private List<Game> games;
 }

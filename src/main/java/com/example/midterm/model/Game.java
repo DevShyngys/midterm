@@ -21,13 +21,14 @@ public class Game {
     private String title;
     private double rating;
 
-    @ManyToOne
-    @JoinColumns(name = "developer_id")
+    @ManyToOne(fetch = FetchType.EAGER)
+    @JoinColumn(name = "developer_id")
     private Developer developer;
 
-    @ManyToMany
+    @ManyToMany(fetch = FetchType.EAGER)
     @JoinTable(name = "game_platform",
-            joinColumns = @JoinColumns("game_id"),
-            inverseJoinColumns = @JoinColumns("platform_id"))
+            joinColumns = @JoinColumn(name = "game_id"),
+            inverseJoinColumns = @JoinColumn(name = "platform_id"))
     private List<Platform> platforms;
+
 }

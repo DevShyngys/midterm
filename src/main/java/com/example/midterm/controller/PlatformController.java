@@ -1,7 +1,7 @@
 package com.example.midterm.controller;
 
 import com.example.midterm.dto.PlatformDTO;
-import com.example.midterm.service.PlatformService;
+import com.example.midterm.service.impl.PlatformServiceImpl;
 import lombok.RequiredArgsConstructor;
 import org.springframework.web.bind.annotation.*;
 
@@ -11,7 +11,7 @@ import java.util.List;
 @RequiredArgsConstructor
 @RequestMapping("/api/platforms")
 public class PlatformController {
-    private final PlatformService platformService;
+    private final PlatformServiceImpl platformService;
 
     @PostMapping
     public PlatformDTO createPlatform(@RequestBody PlatformDTO platformDTO){

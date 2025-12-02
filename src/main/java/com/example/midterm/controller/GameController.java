@@ -1,7 +1,7 @@
 package com.example.midterm.controller;
 
 import com.example.midterm.dto.GameDTO;
-import com.example.midterm.service.GameService;
+import com.example.midterm.service.impl.GameServiceImpl;
 import lombok.RequiredArgsConstructor;
 import org.springframework.web.bind.annotation.*;
 
@@ -11,7 +11,7 @@ import java.util.List;
 @RequestMapping("/api/games")
 @RequiredArgsConstructor
 public class GameController {
-    private final GameService gameService;
+    private final GameServiceImpl gameService;
 
     @PostMapping
     public GameDTO createGame(@RequestBody GameDTO gameDTO){
