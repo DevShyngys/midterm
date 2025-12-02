@@ -21,4 +21,10 @@ public class Developer {
 
     @OneToMany(mappedBy = "developer", cascade = CascadeType.ALL, orphanRemoval = true)
     private List<Game> games;
+
+    public Developer(Long id, String name, String country) {
+        this.id = id;
+        this.name = name;
+        this.country = country;
+    }
 }

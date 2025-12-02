@@ -21,4 +21,10 @@ public class Platform {
 
     @ManyToMany(mappedBy = "platforms")
     private List<Game> games;
+
+    public Platform(Long id, String name, String manufacturer) {
+        this.id = id;
+        this.name = name;
+        this.manufacturer = manufacturer;
+    }
 }
