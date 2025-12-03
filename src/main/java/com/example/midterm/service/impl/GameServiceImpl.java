@@ -41,7 +41,6 @@ public class GameServiceImpl implements GameService {
                 .orElseThrow(()-> new RuntimeException("No game with this id" + id));
         existing.setTitle(gameDTO.getTitle());
         existing.setRating(gameDTO.getRating());
-        existing.setDeveloper(gameDTO.getDeveloper());
         Game updated = gameRepository.save(existing);
 
         return gameMapper.toDto(updated);
